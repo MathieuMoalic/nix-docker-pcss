@@ -1,0 +1,15 @@
+alias rl='exec zsh -l'
+alias rm=' rm -vdrf'
+alias cp='cp -r'
+alias mkdir=' mkdir -p'
+alias l="exa -ahlg --across --icons -s age"
+alias lt='l --tree'
+alias e=$EDITOR
+alias m='amumax'
+alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
+alias rs='rsync -rv'
+alias cd='z'
+alias d='z'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'

@@ -1,0 +1,217 @@
+theme = "mytheme"
+[editor]
+auto-completion = true
+auto-format = true
+auto-info = true
+auto-pairs = true
+bufferline = "multiple"
+completion-trigger-len = 2
+cursorline = true
+gutters = ["diagnostics", "line-numbers"]
+idle-timeout = 400
+line-number = "relative"
+middle-click-paste = true
+mouse = true
+rulers = []
+scroll-lines = 3
+scrolloff = 90
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+git-exclude = true
+git-global = true
+git-ignore = true
+hidden = false
+ignore = true
+max-depth = 10
+parents = true
+
+[editor.indent-guides]
+character = "|"
+render = true
+
+[editor.lsp]
+auto-signature-help = true
+display-messages = true
+display-signature-help-docs = true
+
+[editor.search]
+smart-case = true
+wrap-around = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.statusline]
+center = ["file-name"]
+left = ["mode", "spinner", "version-control"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+
+[editor.whitespace]
+render = "none"
+
+[keys]
+[keys.insert]
+C-a = "move_char_left"
+C-d = "move_char_right"
+C-f = "file_picker"
+C-q = ":q!"
+C-r = "insert_register"
+C-s = "normal_mode"
+C-w = "completion"
+
+[keys.normal]
+"+" = "increment"
+A = "goto_previous_buffer"
+C = "change_selection_noyank"
+C-O = ":config-reload"
+C-f = "file_picker"
+C-o = ["insert_mode", ":o"]
+C-q = ["insert_mode", ":q!"]
+C-s = ":w!"
+C-w = ":buffer-close"
+D = "goto_next_buffer"
+E = "goto_line_end"
+F = "find_prev_char"
+G = "goto_line"
+H = "split_selection"
+I = "insert_at_line_start"
+K = "delete_selection_noyank"
+L = "insert_at_line_end"
+M = "record_macro"
+O = "open_above"
+P = "paste_before"
+Q = "goto_line_start"
+R = "replace_with_yanked"
+S = "half_page_down"
+S-ret = ["open_above", "normal_mode"]
+T = "till_prev_char"
+U = "redo"
+W = "half_page_up"
+Z = "move_next_long_word_end"
+a = "move_char_left"
+c = "change_selection"
+d = "move_char_right"
+e = "move_next_word_start"
+f = "find_next_char"
+h = "select_regex"
+i = "insert_mode"
+k = "delete_selection"
+l = "append_mode"
+m = "replay_macro"
+minus = "decrement"
+o = "open_below"
+p = "paste_after"
+q = "move_prev_word_start"
+r = "replace"
+ret = ["open_below", "normal_mode"]
+s = "move_line_down"
+t = "find_till_char"
+u = "undo"
+v = "select_mode"
+w = "move_line_up"
+y = "yank"
+z = "move_next_word_end"
+"~" = "switch_case"
+
+[keys.normal.J]
+A = "swap_view_left"
+D = "swap_view_right"
+F = "goto_file"
+S = "swap_view_down"
+W = "swap_view_up"
+a = "jump_view_left"
+d = "jump_view_right"
+f = "goto_file"
+h = "hsplit"
+o = "wonly"
+q = "wclose"
+r = "rotate_view"
+s = "jump_view_down"
+v = "vsplit"
+w = "jump_view_up"
+
+[keys.normal."["]
+D = "goto_first_diag"
+G = "goto_first_change"
+T = "goto_prev_test"
+a = "goto_prev_parameter"
+c = "goto_prev_comment"
+d = "goto_prev_diag"
+f = "goto_prev_function"
+g = "goto_prev_change"
+p = "goto_prev_paragraph"
+space = "add_newline_above"
+t = "goto_prev_class"
+
+[keys.normal."]"]
+D = "goto_last_diag"
+G = "goto_last_change"
+T = "goto_next_test"
+a = "goto_next_parameter"
+c = "goto_next_comment"
+d = "goto_next_diag"
+f = "goto_next_function"
+g = "goto_next_change"
+p = "goto_next_paragraph"
+space = "add_newline_below"
+t = "goto_next_class"
+
+[keys.normal.j]
+a = "surround_add"
+f = "select_textobject_around"
+k = "surround_delete"
+m = "match_brackets"
+r = "surround_replace"
+t = "select_textobject_inner"
+
+[keys.normal.space]
+"'" = "last_picker"
+"/" = "global_search"
+"?" = "command_palette"
+D = "workspace_diagnostics_picker"
+F = "file_picker_in_current_directory"
+P = "paste_clipboard_before"
+R = "replace_selections_with_clipboard"
+S = "workspace_symbol_picker"
+Y = "yank_main_selection_to_clipboard"
+a = "code_action"
+b = "buffer_picker"
+d = "diagnostics_picker"
+f = "file_picker"
+h = "select_references_to_symbol_under_cursor"
+j = "jumplist_picker"
+k = "hover"
+p = "paste_clipboard_after"
+r = "rename_symbol"
+s = "symbol_picker"
+y = "yank_to_clipboard"
+
+[keys.select]
+C-f = "file_picker"
+C-q = ":q!"
+C-s = "normal_mode"
+E = "extend_next_long_word_start"
+F = "find_prev_char"
+G = "goto_line"
+Q = "extend_prev_long_word_start"
+S = "half_page_down"
+T = "till_prev_char"
+W = "half_page_up"
+Z = "extend_next_long_word_end"
+a = "extend_char_left"
+d = "extend_char_right"
+e = "extend_next_word_start"
+f = "find_next_char"
+k = "delete_selection"
+q = "extend_prev_word_start"
+s = "extend_line_down"
+t = "find_till_char"
+w = "extend_line_up"
+z = "extend_next_word_end"
